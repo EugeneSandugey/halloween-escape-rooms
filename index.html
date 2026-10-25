@@ -44,7 +44,7 @@ a { color:var(--orange); } footer { margin-top:3em; color:var(--muted); font-siz
 .quick label.pick { display:block; background:var(--card); border:1px solid var(--line); border-radius:12px; padding:12px; color:var(--text); }
 .quick label.pick b { color:var(--orange); display:block; font-size:.8rem; letter-spacing:.05em; text-transform:uppercase; }
 .hal { background:#241a12; border-left:3px solid var(--orange); padding:4px 8px; margin:6px 0; font-size:.92rem; border-radius:4px; }
-/* Phones: each comparison-table row becomes a small card with labels, so no column is cut off (eugene 10/24). */
+/* Phones: each comparison-table row becomes a small card with labels, so no column is cut off. */
 @media (max-width:640px) { .tablewrap { border:none; overflow:visible; } .tablewrap table { min-width:0; }
   .tablewrap tr:first-child { display:none; } .tablewrap tr { display:block; background:var(--card); border:1px solid var(--line); border-radius:12px; margin:0 0 10px; padding:8px 12px; }
   .tablewrap td { display:flex; gap:10px; border:none; padding:3px 0; } .tablewrap td::before { content:attr(data-label); color:var(--muted); min-width:84px; font-size:.82rem; }
@@ -71,12 +71,14 @@ a { color:var(--orange); } footer { margin-top:3em; color:var(--muted); font-siz
 #t-movies:checked ~ #p-movies { display:block; }
 #t-more:checked ~ .tabbar label[for="t-more"] { background:var(--orange); color:#1a0f06; border-color:var(--orange); font-weight:700; }
 #t-more:checked ~ #p-more { display:block; }
+#t-malls:checked ~ .tabbar label[for="t-malls"] { background:var(--orange); color:#1a0f06; border-color:var(--orange); font-weight:700; }
+#t-malls:checked ~ #p-malls { display:block; }
 #t-know:checked ~ .tabbar label[for="t-know"] { background:var(--orange); color:#1a0f06; border-color:var(--orange); font-weight:700; }
 #t-know:checked ~ #p-know { display:block; }
 </style></head><body><main>
 <h1>🎃 Halloween weekend <span>— what should we do?</span></h1>
 <p class="sub">Fri Oct 30 – Sun Nov 1 · for a group of 5–6 · everything from the Antelope Valley through Santa Clarita and the San Fernando Valley · checked Oct 24, 2026 (escape rooms Oct 17–18).</p>
-<div class="tabs"><input type="radio" name="tab" id="t-picks" checked><input type="radio" name="tab" id="t-escape"><input type="radio" name="tab" id="t-haunted"><input type="radio" name="tab" id="t-karts"><input type="radio" name="tab" id="t-laser"><input type="radio" name="tab" id="t-arcade"><input type="radio" name="tab" id="t-bowl"><input type="radio" name="tab" id="t-pool"><input type="radio" name="tab" id="t-disc"><input type="radio" name="tab" id="t-movies"><input type="radio" name="tab" id="t-more"><input type="radio" name="tab" id="t-know"><nav class="tabbar"><label for="t-picks">⭐ Picks</label><label for="t-escape">🔓 Escape rooms</label><label for="t-haunted">🎃 Haunted</label><label for="t-karts">🏎️ Go-karts</label><label for="t-laser">🔫 Laser tag</label><label for="t-arcade">🕹️ Arcades</label><label for="t-bowl">🎳 Bowling</label><label for="t-pool">🎱 Pool</label><label for="t-disc">🥏 Disc golf</label><label for="t-movies">🎬 Movies</label><label for="t-more">➕ More</label><label for="t-know">✅ Good to know</label></nav><div class="panel" id="p-picks"><h2>Best pick in each category</h2><p class="sub">Tap one to open its tab. Every tab has a side-by-side table, each place's price, drive time, the red flags from its worst reviews, and its bad Google reviews: every one of them for all but five big places, which say how many are shown.</p><div class="quick"><label class="pick" for="t-escape"><b>Escape room</b>The Basement (Sylmar) — live-actor horror, Groupon Sun–Thu; or Greatest Escape in Lancaster, no drive</label><label class="pick" for="t-haunted"><b>Haunted night</b>Halloween Horror Nights Fri–Sun (buy now — Oct 31 is selling out) or Reign of Terror&#x27;s lights-out Sunday</label><label class="pick" for="t-karts"><b>Go-karts</b>K1 Speed Burbank: 3 races for $33 if bought in store on Sat Oct 31, usable Sunday too — but a parent must come for anyone under 18</label><label class="pick" for="t-bowl"><b>Bowling</b>Lucky Strike Lancaster with the $70.50 Groupon for 6 (not Sat after 6 PM)</label><label class="pick" for="t-disc"><b>Free day out</b>Central Park disc golf, Santa Clarita — then MB2, 1.4 miles away</label><label class="pick" for="t-more"><b>Paintball</b>Combat Paintball, Castaic — Groupon $47 for up to 10, weekends ($45.49 with code HALLOWEEN until midnight Oct 24)</label></div><div class="callout"><b>Before anything:</b> anyone under 18 needs a waiver signed by their own parent at most places — see <label class="inl" for="t-know">✅ Good to know</label>.</div></div><div class="panel" id="p-escape"><p class="sub">Fri Oct 30 – Sun Nov 1 · prices for a group of <b>5</b> · every open escape room from Lancaster through the whole San Fernando Valley · checked Oct 17–18, 2026. Tap any place for booking, the Groupon, directions and reviews.</p>
+<div class="tabs"><input type="radio" name="tab" id="t-picks" checked><input type="radio" name="tab" id="t-escape"><input type="radio" name="tab" id="t-haunted"><input type="radio" name="tab" id="t-karts"><input type="radio" name="tab" id="t-laser"><input type="radio" name="tab" id="t-arcade"><input type="radio" name="tab" id="t-bowl"><input type="radio" name="tab" id="t-pool"><input type="radio" name="tab" id="t-disc"><input type="radio" name="tab" id="t-movies"><input type="radio" name="tab" id="t-more"><input type="radio" name="tab" id="t-malls"><input type="radio" name="tab" id="t-know"><nav class="tabbar"><label for="t-picks">⭐ Picks</label><label for="t-escape">🔓 Escape rooms</label><label for="t-haunted">🎃 Haunted</label><label for="t-karts">🏎️ Go-karts</label><label for="t-laser">🔫 Laser tag</label><label for="t-arcade">🕹️ Arcades</label><label for="t-bowl">🎳 Bowling</label><label for="t-pool">🎱 Pool</label><label for="t-disc">🥏 Disc golf</label><label for="t-movies">🎬 Movies</label><label for="t-more">➕ More</label><label for="t-malls">🛍️ Malls</label><label for="t-know">✅ Good to know</label></nav><div class="panel" id="p-picks"><h2>Best pick in each category</h2><p class="sub">Tap one to open its tab. Every tab has a side-by-side table, each place's price, drive time, the red flags from its worst reviews, and its bad Google reviews: every one of them for all but five big places, which say how many are shown.</p><div class="quick"><label class="pick" for="t-escape"><b>Escape room</b>The Basement (Sylmar) — live-actor horror, Groupon Sun–Thu; or Greatest Escape in Lancaster, no drive</label><label class="pick" for="t-haunted"><b>Haunted night</b>Halloween Horror Nights Fri–Sun (buy now — Oct 31 is selling out) or Reign of Terror&#x27;s lights-out Sunday</label><label class="pick" for="t-karts"><b>Go-karts</b>K1 Speed Burbank: 3 races for $33 if bought in store on Sat Oct 31, usable Sunday too — but a parent must come for anyone under 18</label><label class="pick" for="t-bowl"><b>Bowling</b>Lucky Strike Lancaster with the $70.50 Groupon for 6 (not Sat after 6 PM)</label><label class="pick" for="t-disc"><b>Free day out</b>Central Park disc golf, Santa Clarita — then MB2, 1.4 miles away</label><label class="pick" for="t-malls"><b>Mall</b>Westfield Topanga for the most stores; Universal CityWalk to hang out before Horror Nights</label><label class="pick" for="t-more"><b>Paintball</b>Combat Paintball, Castaic — Groupon $47 for up to 10, weekends ($45.49 with code HALLOWEEN until midnight Oct 24)</label></div><div class="callout"><b>Before anything:</b> anyone under 18 needs a waiver signed by their own parent at most places — see <label class="inl" for="t-know">✅ Good to know</label>.</div></div><div class="panel" id="p-escape"><p class="sub">Fri Oct 30 – Sun Nov 1 · prices for a group of <b>5</b> · every open escape room from Lancaster through the whole San Fernando Valley · checked Oct 17–18, 2026. Tap any place for booking, the Groupon, directions and reviews.</p>
 
 <div class="callout"><b>⏰ Groupon code HALLOWEEN, checked Oct 24 at 7 PM:</b> on The Basement and Lock House, Groupon said the code's extra discount ends at midnight that night; on Enchanted it runs through Nov 1. Without the code: The Basement $216.99 for 5, Lock House $180 for 6. Buy the voucher first, then book your time (Lock House: call them).</div>
 
@@ -1885,6 +1887,138 @@ My son had fun but this place needs to fix, repair and clean alot of its trampol
     <a class="btn " href="https://www.google.com/maps/search/?api=1&amp;query=Sky%20Zone%20Trampoline%20Park%201301%20W%20Rancho%20Vista%20Blvd%20B%2C%20Palmdale%2C%20CA%2093551&amp;query_place_id=ChIJP1P_JZ9ZwoARZm5Y8m3YHoY" target="_blank" rel="noopener">⭐ Google reviews</a>
     <a class="btn" href="tel:6614492911">📞 (661) 449-2911</a>
   </div>
-</section><h2>Skipped</h2><ul><li><b>Break Room LA (rage room, Van Nuys)</b>: a small crate of dishes for $25–65 each; under-18s need a parent the whole visit</li><li><b>Paintball USA (Palmdale)</b>: moved to a smaller site with 3–4 small fields; refs inattentive</li><li><b>Urban Air (Palmdale)</b>: not open yet — presale until Dec 13</li><li><b>AV Axe &amp; Blade (Lancaster)</b>: reported not to exist / no answer</li></ul></div><div class="panel" id="p-know"><h2>Good to know</h2><ul><li><b>Waivers:</b> Almost everything needs a waiver, and for anyone under 18 it must be signed by a PARENT or guardian — not a friend, not a sibling. Friends visiting from out of town: have your parents sign online before the trip. Confirmed on: K1 Speed, Top Out climbing, The Basement (which also wants a copy of that parent&#x27;s ID).</li><li><b>A parent in the building:</b> K1 Speed (under-18 drivers), Golden Axe and Break Room LA (minors), Dave &amp; Buster&#x27;s (a 25+ guardian), and Cinemark for R movies (a 21+ parent/guardian) all need an actual adult with you. An 18-year-old friend counts at The Basement, not at these.</li><li><b>IDs:</b> Bring a physical photo ID: Six Flags may ask 16+ guests to prove their age, and Cinemark won&#x27;t take school IDs or phone photos.</li><li><b>Groupon code HALLOWEEN:</b> Checked Oct 24, 7 PM: on The Basement, Lock House and Combat Paintball, Groupon said the code ends at midnight that night; on Bowlero/Lucky Strike, Sky Zone and Enchanted it runs through Nov 1. Buy the voucher, then book.</li><li><b>Saturday is Halloween:</b> Fri Oct 30 and Sat Oct 31 are the big Halloween nights, so book ahead (Horror Nights&#x27; Oct 31 day+night ticket already sold out).</li><li><b>Halloween hours (read on each place&#x27;s own site Oct 24):</b> Lazertag Extreme closes at 4 PM on Sat Oct 31. Sky Zone closes early that day (Santa Clarita 5 PM, Palmdale 6 PM). K1 Speed says most of its centers close at 9 PM on Halloween, though the Burbank and Thousand Oaks pages still show midnight — call. Oak Grove disc golf is closed all day Oct 31. Fright Fest: Six Flags&#x27; calendar shows Sun Nov 1, 7–11 PM, but its event page leaves Nov 1 out — check. Everything else showed its normal weekend hours.</li><li><b>Drive times:</b> Rough estimates from central Lancaster without traffic (OSRM), computed Oct 24.</li></ul></div></div>
+</section><h2>Skipped</h2><ul><li><b>Break Room LA (rage room, Van Nuys)</b>: a small crate of dishes for $25–65 each; under-18s need a parent the whole visit</li><li><b>Paintball USA (Palmdale)</b>: moved to a smaller site with 3–4 small fields; refs inattentive</li><li><b>Urban Air (Palmdale)</b>: not open yet — presale until Dec 13</li><li><b>AV Axe &amp; Blade (Lancaster)</b>: reported not to exist / no answer</li></ul></div><div class="panel" id="p-malls"><h2>Malls &amp; hangouts</h2><div class="callout">Where to just walk around, eat and shop. No reviews here, just what each place has that a group of 16–18-year-olds would care about. The Antelope Valley Mall is a plain everyday mall, fine for an hour; the good ones are in Santa Clarita and the Valley. None of these posts an under-18 curfew rule on its own site (checked Oct 24).</div><div class="tablewrap"><table><tr><th>Place</th><th>Drive</th><th>Price</th><th>Google</th><th>Links</th></tr><tr><td data-label="">Westfield Topanga<br><span class="muted">Canoga Park</span></td><td data-label="Drive">~1 hr 20 min</td><td data-label="Price"><b>Free to walk around</b></td><td data-label="Google">—</td><td data-label="Links"><a class="btn " href="https://www.westfield.com/en/united-states/topanga/retailers" target="_blank" rel="noopener">Site</a> </td></tr><tr><td data-label="">Universal CityWalk<br><span class="muted">Universal City</span></td><td data-label="Drive">~1 hr 16 min</td><td data-label="Price"><b>Free to walk around</b></td><td data-label="Google">—</td><td data-label="Links"><a class="btn " href="https://www.universalstudioshollywood.com/web/en/us/things-to-do/lands/citywalk" target="_blank" rel="noopener">Site</a> </td></tr><tr><td data-label="">Northridge Fashion Center<br><span class="muted">Northridge</span></td><td data-label="Drive">~1 hr 8 min</td><td data-label="Price"><b>Free to walk around</b></td><td data-label="Google">—</td><td data-label="Links"><a class="btn " href="https://www.northridgefashioncenter.com/en/directory/" target="_blank" rel="noopener">Site</a> </td></tr><tr><td data-label="">Burbank Town Center<br><span class="muted">Burbank</span></td><td data-label="Drive">~1 hr 10 min</td><td data-label="Price"><b>Free to walk around</b></td><td data-label="Google">—</td><td data-label="Links"><a class="btn " href="https://burbanktowncenter.com/shopping" target="_blank" rel="noopener">Site</a> </td></tr><tr><td data-label="">Valencia Town Center<br><span class="muted">Valencia</span></td><td data-label="Drive">~57 min</td><td data-label="Price"><b>Free to walk around</b></td><td data-label="Google">—</td><td data-label="Links"><a class="btn " href="https://www.valenciatowncenter.com/directory" target="_blank" rel="noopener">Site</a> </td></tr><tr><td data-label="">Antelope Valley Mall<br><span class="muted">Palmdale</span></td><td data-label="Drive">~13 min</td><td data-label="Price"><b>Free to walk around</b></td><td data-label="Google">—</td><td data-label="Links"><a class="btn " href="https://www.av-mall.com/retail" target="_blank" rel="noopener">Site</a> </td></tr></table></div>
+<section class="card">
+  <div class="tags"><span class="tag g">BEST MALL</span><span class="tag">~1 hr 20 min from Lancaster</span></div>
+  <h3>Westfield Topanga <small>— Canoga Park</small></h3>
+  <div class="price">Free to walk around</div>
+  
+  
+  <div class="alt">🕒 Fri 10 AM–9 PM · Sat 10 AM–9 PM · Sun 11 AM–7 PM <span class="muted">(their site, read Oct 24)</span></div>
+  
+  <ul class="good"><li>The biggest and best-stocked: Apple, a Tesla showroom, LEGO, Uniqlo, Zara, Target</li><li>Sneakers and streetwear: JD Sports, Champs, Foot Locker, Shoe Palace, Tillys, PacSun, Zumiez, Vans, adidas, Lids</li><li>Hot Topic, BoxLunch, Spencer&#x27;s, Miniso; an AMC theater; CHAIN for food</li><li>Red Door Escape Room is inside (see the Escape rooms tab)</li></ul>
+  <div class="flaglabel">Red flags from the worst reviews</div>
+  <ul class="bad"><li>Farthest of these: about 1 hr 20 min</li></ul>
+  
+  
+  <div class="btns">
+    <a class="btn primary" href="https://www.westfield.com/en/united-states/topanga/retailers" target="_blank" rel="noopener">📅 Website / book</a>
+    
+    <a class="btn " href="https://www.westfield.com/en/united-states/topanga/opening-hours" target="_blank" rel="noopener">Hours</a>
+    <a class="btn " href="https://www.google.com/maps/dir/?api=1&amp;destination=6600%20Topanga%20Canyon%20Boulevard%2C%20Canoga%20Park%2C%20CA%2091303" target="_blank" rel="noopener">🧭 Directions</a>
+    
+    
+  </div>
+</section>
+<section class="card">
+  <div class="tags"><span class="tag o">BEST HANGOUT</span><span class="tag">~1 hr 16 min from Lancaster</span></div>
+  <h3>Universal CityWalk <small>— Universal City</small></h3>
+  <div class="price">Free to walk around</div>
+  <div class="alt">walk-up, no ticket needed</div>
+  
+  <div class="alt">🕒 Fri 11 AM–10 PM · Sat 11 AM–10 PM · Sun 11 AM–9 PM <span class="muted">(their site, read Oct 24)</span></div>
+  <div class="hal">🎃 Halloween weekend: Halloween Horror Nights runs next door every night through Nov 1, so evenings are packed.</div>
+  <ul class="good"><li>An outdoor street of shops and food right outside Universal Studios, not a regular mall</li><li>NBA Store, POP MART (blind-box collectibles), Universal Studios Store, Sanrio, LINE Friends</li><li>Food: Voodoo Doughnut (horror donuts for Halloween), Raising Cane&#x27;s, Toothsome Chocolate Emporium</li><li>Universal Cinema and Escapology CityWalk right there; pairs with Halloween Horror Nights</li></ul>
+  <div class="flaglabel">Red flags from the worst reviews</div>
+  <ul class="bad"><li>Packed in the evenings while Horror Nights is running</li></ul>
+  
+  
+  <div class="btns">
+    <a class="btn primary" href="https://www.universalstudioshollywood.com/web/en/us/things-to-do/lands/citywalk" target="_blank" rel="noopener">📅 Website / book</a>
+    
+    
+    <a class="btn " href="https://www.google.com/maps/dir/?api=1&amp;destination=100%20Universal%20City%20Plaza%2C%20Universal%20City%2C%20CA%2091608" target="_blank" rel="noopener">🧭 Directions</a>
+    
+    
+  </div>
+</section>
+<section class="card">
+  <div class="tags"><span class="tag ">MOST TO DO</span><span class="tag">~1 hr 8 min from Lancaster</span></div>
+  <h3>Northridge Fashion Center <small>— Northridge</small></h3>
+  <div class="price">Free to walk around</div>
+  
+  
+  <div class="alt">🕒 Fri 11 AM–9 PM · Sat 11 AM–9 PM · Sun 11 AM–7 PM <span class="muted">(their site, read Oct 24)</span></div>
+  
+  <ul class="good"><li>Dave &amp; Buster&#x27;s, Escapology escape rooms and an AMC theater all in one mall</li><li>GameStop; sneakers at JD Sports, Champs, Foot Locker, Shoe Palace; PacSun, Journeys, Hot Topic, BoxLunch</li><li>Apple, Miniso, Sharetea, a food court</li></ul>
+  <div class="flaglabel">Red flags from the worst reviews</div>
+  <ul class="bad"><li>Dave &amp; Buster&#x27;s lets under-18s in only with a guardian 25+ (see Arcades)</li></ul>
+  
+  
+  <div class="btns">
+    <a class="btn primary" href="https://www.northridgefashioncenter.com/en/directory/" target="_blank" rel="noopener">📅 Website / book</a>
+    
+    
+    <a class="btn " href="https://www.google.com/maps/dir/?api=1&amp;destination=9301%20Tampa%20Avenue%2C%20Northridge%2C%20CA%2091324" target="_blank" rel="noopener">🧭 Directions</a>
+    
+    <a class="btn" href="tel:8188859700">📞 (818) 885-9700</a>
+  </div>
+</section>
+<section class="card">
+  <div class="tags"><span class="tag o">ROUND1 INSIDE</span><span class="tag">~1 hr 10 min from Lancaster</span></div>
+  <h3>Burbank Town Center <small>— Burbank</small></h3>
+  <div class="price">Free to walk around</div>
+  
+  
+  <div class="alt">🕒 Fri 11 AM–8 PM · Sat 11 AM–9 PM · Sun 11 AM–7 PM <span class="muted">(their site, read Oct 24)</span></div>
+  <div class="hal">🎃 Halloween weekend: Kids&#x27; trick-or-treat Sat Oct 31, 11 AM–3 PM (ages 12 and under), so expect it busy then. Round1 inside stays open till 2 AM after the mall closes.</div>
+  <ul class="good"><li>Round1 (huge arcade, bowling, karaoke) inside, open till 2 AM</li><li>AMC theater, Barnes &amp; Noble; Finish Line, Shoe Palace, Journeys, Zumiez, Vans, Hot Topic, H&amp;M</li><li>Teaspoon boba; K1 Speed Burbank is 0.8 miles away</li></ul>
+  <div class="flaglabel">Red flags from the worst reviews</div>
+  <ul class="bad"><li>The mall itself closes early (8 PM Friday)</li></ul>
+  
+  
+  <div class="btns">
+    <a class="btn primary" href="https://burbanktowncenter.com/shopping" target="_blank" rel="noopener">📅 Website / book</a>
+    
+    <a class="btn " href="https://www.round1usa.com/locations/053atc" target="_blank" rel="noopener">Round1</a>
+    <a class="btn " href="https://www.google.com/maps/dir/?api=1&amp;destination=201%20East%20Magnolia%20Boulevard%2C%20Burbank%2C%20CA%2091502" target="_blank" rel="noopener">🧭 Directions</a>
+    
+    <a class="btn" href="tel:8185668556">📞 (818) 566-8556</a>
+  </div>
+</section>
+<section class="card">
+  <div class="tags"><span class="tag g">CLOSEST GOOD ONE</span><span class="tag">~57 min from Lancaster</span></div>
+  <h3>Valencia Town Center <small>— Valencia</small></h3>
+  <div class="price">Free to walk around</div>
+  
+  
+  <div class="alt">🕒 Fri 10 AM–9 PM · Sat 10 AM–9 PM · Sun 11 AM–7 PM <span class="muted">(their site, read Oct 24)</span></div>
+  
+  <ul class="good"><li>Apple, Foot Locker, Journeys, Zumiez, Vans, Hollister, American Eagle, H&amp;M, Lids</li><li>Hot Topic, Spencer&#x27;s, Miniso, Slime World, It&#x27;s Boba Time, The Cheesecake Factory</li><li>Close to MB2 karts (3.6 mi), Central Park disc golf (3.2 mi) and The Cube (2.2 mi)</li></ul>
+  <div class="flaglabel">Red flags from the worst reviews</div>
+  <ul class="bad"><li>Round1 is &quot;coming soon&quot; here, not open yet</li></ul>
+  
+  
+  <div class="btns">
+    <a class="btn primary" href="https://www.valenciatowncenter.com/directory" target="_blank" rel="noopener">📅 Website / book</a>
+    
+    
+    <a class="btn " href="https://www.google.com/maps/dir/?api=1&amp;destination=24201%20West%20Valencia%20Blvd%2C%20Valencia%2C%20CA%2091355" target="_blank" rel="noopener">🧭 Directions</a>
+    
+    <a class="btn" href="tel:6616781677">📞 (661) 678-1677</a>
+  </div>
+</section>
+<section class="card">
+  <div class="tags"><span class="tag r">CLOSE BUT BASIC</span><span class="tag">~13 min from Lancaster</span></div>
+  <h3>Antelope Valley Mall <small>— Palmdale</small></h3>
+  <div class="price">Free to walk around</div>
+  
+  
+  <div class="alt">🕒 Fri 10 AM–9 PM · Sat 10 AM–9 PM · Sun 11 AM–7 PM <span class="muted">(their site, read Oct 24)</span></div>
+  <div class="hal">🎃 Halloween weekend: Mall-wide trick-or-treating Sat Oct 31, 5–7 PM (little kids).</div>
+  <ul class="good"><li>Finish Line, Foot Locker, Zumiez, Hollister, H&amp;M, Dick&#x27;s Sporting Goods, BoxLunch</li><li>Cinemark with recliners, Claw Daddy (claw machines), Yard House; Sky Zone Palmdale is 0.3 miles away</li></ul>
+  <div class="flaglabel">Red flags from the worst reviews</div>
+  <ul class="bad"><li>An ordinary mall: nothing here you can&#x27;t get at the others</li><li>Round1 Palmdale isn&#x27;t open yet</li></ul>
+  
+  
+  <div class="btns">
+    <a class="btn primary" href="https://www.av-mall.com/retail" target="_blank" rel="noopener">📅 Website / book</a>
+    
+    
+    <a class="btn " href="https://www.google.com/maps/dir/?api=1&amp;destination=1233%20Rancho%20Vista%20Blvd%2C%20Palmdale%2C%20CA%2093551" target="_blank" rel="noopener">🧭 Directions</a>
+    
+    
+  </div>
+</section></div><div class="panel" id="p-know"><h2>Good to know</h2><ul><li><b>Waivers:</b> Almost everything needs a waiver, and for anyone under 18 it must be signed by a PARENT or guardian — not a friend, not a sibling. Friends visiting from out of town: have your parents sign online before the trip. Confirmed on: K1 Speed, Top Out climbing, The Basement (which also wants a copy of that parent&#x27;s ID).</li><li><b>A parent in the building:</b> K1 Speed (under-18 drivers), Golden Axe and Break Room LA (minors), Dave &amp; Buster&#x27;s (a 25+ guardian), and Cinemark for R movies (a 21+ parent/guardian) all need an actual adult with you. An 18-year-old friend counts at The Basement, not at these.</li><li><b>IDs:</b> Bring a physical photo ID: Six Flags may ask 16+ guests to prove their age, and Cinemark won&#x27;t take school IDs or phone photos.</li><li><b>Groupon code HALLOWEEN:</b> Checked Oct 24, 7 PM: on The Basement, Lock House and Combat Paintball, Groupon said the code ends at midnight that night; on Bowlero/Lucky Strike, Sky Zone and Enchanted it runs through Nov 1. Buy the voucher, then book.</li><li><b>Saturday is Halloween:</b> Fri Oct 30 and Sat Oct 31 are the big Halloween nights, so book ahead (Horror Nights&#x27; Oct 31 day+night ticket already sold out).</li><li><b>Halloween hours (read on each place&#x27;s own site Oct 24):</b> Lazertag Extreme closes at 4 PM on Sat Oct 31. Sky Zone closes early that day (Santa Clarita 5 PM, Palmdale 6 PM). K1 Speed says most of its centers close at 9 PM on Halloween, though the Burbank and Thousand Oaks pages still show midnight — call. Oak Grove disc golf is closed all day Oct 31. Fright Fest: Six Flags&#x27; calendar shows Sun Nov 1, 7–11 PM, but its event page leaves Nov 1 out — check. Everything else showed its normal weekend hours.</li><li><b>Drive times:</b> Rough estimates from central Lancaster without traffic (OSRM), computed Oct 24.</li></ul></div></div>
 <footer>Prices, hours and deals were read on each place's own site or Groupon on the date shown; they change, so confirm when you book.</footer>
 </main></body></html>
